@@ -1,0 +1,6 @@
+c:\users\gkam4141\documents\visual studio 2013\Projects\NetStockQuote\NetStockQuote\bin\Debug\NetStockQuote.pdb
+c:\users\gkam4141\documents\visual studio 2013\Projects\NetStockQuote\NetStockQuote\obj\Debug\NetStockQuote.csprojResolveAssemblyReference.cache
+c:\users\gkam4141\documents\visual studio 2013\Projects\NetStockQuote\NetStockQuote\obj\Debug\NetStockQuote.pdb
+c:\users\gkam4141\documents\visual studio 2013\Projects\NetStockQuote\NetStockQuote\bin\Debug\NetStockQuote.dll.config
+c:\users\gkam4141\documents\visual studio 2013\Projects\NetStockQuote\NetStockQuote\bin\Debug\NetStockQuote.dll
+c:\users\gkam4141\documents\visual studio 2013\Projects\NetStockQuote\NetStockQuote\obj\Debug\NetStockQuote.dll
