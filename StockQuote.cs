@@ -115,7 +115,7 @@ namespace NetStockQuote
                 }
                 catch (Exception e) { throw e; }
             }
-            //Values
+            //Value
             public class Values
             {
                 public Double Open { get; set; }
@@ -223,6 +223,50 @@ namespace NetStockQuote
                 toReturn.Add(pair.Value.AdjClose);
             }
             return toReturn;
+        }
+        #endregion
+
+        #region Get CSV file
+        /// <summary>
+        /// Downloads an CSV file version of the data generated for the stock quote. It saves it in the specified File Path
+        /// </summary>
+        /// <param name="FilePath">Parameter determines where the file will be saved</param>
+        public void GetCSV(string FilePath)
+        {
+            try
+            {
+                if (Directory.Exists(FilePath))
+                {
+                    string FileName = FilePath + @"\" + this.Symbol + "_" + this.FromDate.ToString("yyy_MM_dd") + "_" + this.ToDate.ToString("yyy_MM_dd") + ".csv";
+                    if (File.Exists(FileName))
+                    { File.Delete(FileName); }
+
+                    WebClient client = new WebClient();
+                    client.DownloadFile(this.URL, FileName);
+                }
+            }
+            catch (Exception e) { throw e; }
+        }
+        /// <summary>
+        /// Downloads an CSV file version of the data generated for the stock quote. It saves it in the specified File Path with specified File Name
+        /// </summary>
+        /// <param name="FilePath">Parameter determines where the file will be saved</param>
+        /// /// <param name="FileName">Parameter determines what the file will be named. Automatically appends .csv to the end</param>
+        public void GetCSV(string FilePath, string FileName)
+        {
+            try
+            {
+                if (Directory.Exists(FilePath))
+                {
+                    FileName = FilePath + @"\" + FileName + ".csv";
+                    if (File.Exists(FileName))
+                    { File.Delete(FileName); }
+
+                    WebClient client = new WebClient();
+                    client.DownloadFile(this.URL, FileName);
+                }
+            }
+            catch (Exception e) { throw e; }
         }
         #endregion
     }
